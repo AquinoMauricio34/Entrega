@@ -7,7 +7,7 @@
         int opcion_seleccionada,id_buscar;
         do  {
             //limpiamos pantalla 
-            system("cls");
+            system("cls");//
             //consultamos la fecha del sistema
             fecha();
             printf("XONARED - A la velocidad de la luz\n");
