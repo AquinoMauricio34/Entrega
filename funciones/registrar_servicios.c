@@ -8,10 +8,7 @@
 #include"../prototipos.h"
 
 //creamos los servicios en un struct
-/*
-by Sciangula Hugo v1 26/10/21
-detalles: se va crear en un struct servicios de forma ilimitada, con un id, y un nombre y un precio, que luego van a poder ser modificados.
-*/
+
 void registrar_servicios() {
     FILE *archivo;
     if((archivo = fopen("servicios/servicios.dat","ab")) != NULL) {

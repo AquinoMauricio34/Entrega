@@ -26,7 +26,7 @@ typedef struct {
     int id,estado_cliente,estado_factura; 
 } facturas;
 
-//definimos la estructura para guardar los servicios que selecciono el cliente
+//definimos la  estructura para guardar los servicios que selecciono el cliente
 typedef struct {
     fechas fecha_alta,fecha_baja;
     //lo vamos a identificar por un id

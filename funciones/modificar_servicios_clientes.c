@@ -6,9 +6,7 @@
 #include<string.h>
 #include"../estructuras.h"
 #include"../prototipos.h"
-/*
-by Sciangula Hugo v1 07/10/2021
-*/
+
  void modificar_servicios_clientes(int id) {
 
     FILE *apuntador_contratos,*apuntador_servicios;

@@ -12,12 +12,14 @@ void seleccionar_servicio();
 void verificacion_dni();
 void modificar_clientes();
 void modificar_servicios();
-void fecha();
+void fecha(int,int);
 void modificar_servicios_clientes(int);
 void fecha_diferenciador(int, int, int, int *, int *, int *, int);
 void listar_contrataciones();
 void listar_operaciones();
 void generador_facturas(int,int,int);
 void pago_facturas();
+void estado_cliente();
+void puesto(int *);
 
 #endif //PROTOTIPOS_C

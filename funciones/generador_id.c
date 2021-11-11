@@ -8,10 +8,7 @@
 #include"../prototipos.h"
 
 //generador id
-/*
-by Sciangula Hugo v1 26/10/21
-detalles: se crea por primera vez un id de cliente el cual nunca va a ser modificado, para ello, en un archivo binario, se procede a escribir por primera vez un 0, y una vez creado, se procede solo a leerlo, y ir incrementandolo de forma continia 1 a 1.
-*/
+
 void generador_id(int *id_generado,char *nombre_archivo) {
   FILE *generacion_id;
   //declaramos centinela para la primera vez que se vaya a crear el archivo

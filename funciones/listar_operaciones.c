@@ -6,10 +6,7 @@
 #include"../estructuras.h"
 #include"../prototipos.h"
 
-/*
-by Sciangula Hugo v1 07/11/2021
-detalles: se van a listar los servicios que correspondan con una fecha y con un estatus definido
-*/
+
 void listar_operaciones() {
     int m1,y1,mfirma,yfirma, estado;
     system("cls");

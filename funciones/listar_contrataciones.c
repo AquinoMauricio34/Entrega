@@ -6,10 +6,7 @@
 #include"../estructuras.h"
 #include"../prototipos.h"
 
-/*
-by Sciangula Hugo 67377
-detalles: en esta funcion se van a listar todas las contrataciones que se hicieron de una fecha a otra
-*/
+
 
 void listar_contrataciones() {
     int y1,y2,m1,m2,d1,d2,dfirma,mfirma,yfirma,centinela = 0;
@@ -50,6 +47,7 @@ void listar_contrataciones() {
                     }
                 }  
             } //y2 > yfirma
+            //Error porque si pone un mes o un año inferior a la fecha de firma no entrará al if-----------------------------------------------------------------------------------------------------------
             if((dfirma >= d1 && mfirma >= m1 && yfirma >= y1) && centinela == 1) {
                 printf("%-10d | %d/%d/%-10d | ",listar_contratos.id,listar_contratos.fecha_firma.day,listar_contratos.fecha_firma.mont,listar_contratos.fecha_firma.year); 
                 //traemos los detalles del cliente (total, nombre, estado)

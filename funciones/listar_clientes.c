@@ -8,10 +8,7 @@
 #include"../prototipos.h"
 
 //listado de clientes
-/*
-by Sciangula Hugo v1 26/10/21
-detalles: se listan los clientes una vez leido el struct, nada del otro mundo
-*/
+
 
 void listar_clientes() {
     int id_cliente;
@@ -34,6 +31,8 @@ void listar_clientes() {
                     //realizamos la busqueda de los detalles del cliente
                     while(!feof(archivo_contratos)) {
                         if(carga_clientes.id == listar_contratos.id) {
+                            if(listar_contratos.total == 0)
+                                listar_contratos.descuento = 0;
                             printf("%-10d | %-10d | %-20s | %-10lld | %-30s | %-10.2f\n",carga_clientes.id,carga_clientes.dni, carga_clientes.nombre, carga_clientes.numero,carga_clientes.direccion,listar_contratos.total-listar_contratos.descuento);
                         }
                     //nos movemos en el archivo

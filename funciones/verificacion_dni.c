@@ -8,10 +8,7 @@
 #include"../prototipos.h"
 
 //verificacion del dni existente o no en el struct
-/*
-by Sciangula Hugo v1 26/10/21
-detalles: se va a verificar si el dni ya esta registrado, y si es asi, se va a rireccionar al cliente, al apartado de modificiaciones, para que se vuelva a dar de alta (ya que si esta registrado en el sistema, es porque ya utilizo nuestros servicios)
-*/
+
 void verificacion_dni(int *centinela, int dni_cargado) {
     FILE *archivo;
     printf("Vericacion dni cliente\n");

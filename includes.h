@@ -17,5 +17,7 @@
 #include"funciones/listar_operaciones.c"
 #include"funciones/generador_facturas.c"
 #include"funciones/pago_facturas.c"
+#include"funciones/estado_cliente.c"
+#include"funciones/puesto.c"
 
 #endif //INCLUDES_H

@@ -13,7 +13,9 @@ void registrar_clientes() {
     int id = 0,centinela = 0, total_pagar = 0, descuento = 0;
     //limpiamos pantalla
     system("cls");
+    //mostramos la fecha actual
     printf("%d/%d/%d\n",day,mont,year);
+    //Abrimos el archivo para la carga de los datos del cliente
     if((archivo = fopen("clientes/clientes.dat","ab"))) {
         clientes carga_clientes;
         //solicitamos el DNI
@@ -23,7 +25,9 @@ void registrar_clientes() {
         fflush(stdin);
         //ahora vamos a verificar que el dni exista, en caso de que existiece significaria que ya esta registrado, y lo redireccionariamos al apartado de modificaciones c:
         verificacion_dni(&centinela,carga_clientes.dni);
+        //si la centinela es igual a 1 significa que el dni está repetido y no entra al if
         if(centinela == 0) {
+            //toma de datos
             char nombre_archivo[30] = {"clientes/id_clientes.dat"};
             printf("Nombre Completo: ");
             //scanf("%s",carga_clientes.nombre);
@@ -41,10 +45,11 @@ void registrar_clientes() {
             gets(carga_clientes.email);
             fflush(stdin);
             printf("Seleccione un Servicio\n");
-            //en esta llamamos a una funcion para solicitar la seleccion de los servicios
+            //llamamos a una funcion para solicitar la seleccion de los servicios
             seleccionar_servicio(&total_pagar,carga_clientes.dni);
             //ahora cargamos ese total en el registro del cliente
-            //verificamos que se hayan seleccionado servicios
+            //verificamos que se hayan seleccionado servicios, ya que si nungun servicio ha sido
+            //seleccionado, no se registra al cliente
             if(total_pagar != 0) {
                 //generamos id
                 generador_id(&id,nombre_archivo);

@@ -67,13 +67,10 @@ void pago_facturas() {
                     //imprimimos mensaje de pago
                     if(opcion == 1)
                         printf("Pago realizado correctamente \n");
+                        //FALTO GUARDAR EL PAGADO
                     
                 }
                 fseek(ap_facturas,sizeof(facturas),SEEK_END);
-            }
-            else
-            {
-                printf("Cliente no encontrado \n");
             }
             //volvemos a leer para evitar bucle
             fread(&e_facturas,sizeof(facturas),1,ap_facturas);
@@ -112,10 +109,10 @@ void pago_facturas() {
                         e_facturas.fecha_pago.mont = mont;
                         e_facturas.fecha_pago.year = year;
                         //aca guardamos las fechas de cobro para la siguiente factura
-                        e_facturas.fecha_proximo.day = day_fun;
+                        e_facturas.fecha_proximo.day = inicio_dia_cobro;
                         e_facturas.fecha_proximo.mont = mont_fun;
                         e_facturas.fecha_proximo.year = year_fun;
-                        e_facturas.fecha_vencimiento.day = day_fun+10;
+                        e_facturas.fecha_vencimiento.day = fin_dia_cobro;
                         e_facturas.fecha_vencimiento.mont = mont_fun;
                         e_facturas.fecha_vencimiento.year = year_fun;
                         //aca indicamos que ya pago la factura

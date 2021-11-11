@@ -42,7 +42,7 @@ void detalles_cliente(int id,int volver) {
         clientes datos_clientes;
         //veo si no esta vacio el archivo
         fread(&datos_clientes,sizeof(clientes),1,archivo);
-        while(!feof(archivo)) {
+        while(!feof(archivo)) {//Inicio while1
             //lo buscamos por id
             if(id == datos_clientes.id) {
                 printf("ID Cliente: %d\n",datos_clientes.id);
@@ -74,7 +74,7 @@ void detalles_cliente(int id,int volver) {
                     //buscamos el contrato por su id
                     while(!feof(archivo_contrato)) {
                         if(datos_clientes.id == listar_contrato.id) {
-                            printf("datos_clientes.id = %d y listar_contrato.id = %d\n",datos_clientes.id,listar_contrato.id);
+                            // printf("datos_clientes.id = %d y listar_contrato.id = %d\n",datos_clientes.id,listar_contrato.id);
                             //mostramos los detalles de la factura
                             printf("Fecha de inicio contrato: %d/%d/%d\n",listar_contrato.fecha_firma.day,listar_contrato.fecha_firma.mont,listar_contrato.fecha_firma.year);
                             printf("Fecha de fin contrato: %d/%d/%d\n",listar_contrato.fecha_fin.day,listar_contrato.fecha_fin.mont,listar_contrato.fecha_fin.year);
@@ -86,9 +86,9 @@ void detalles_cliente(int id,int volver) {
 
                             total_pagar = listar_contrato.total;
                             //descuentos(listar_contrato.dni);
-                            printf("descuento = %f\n",listar_contrato.descuento);
+                            // printf("descuento = %f\n",listar_contrato.descuento);
                             descuento = listar_contrato.descuento;
-                            printf("2descuento = %f\n",descuento);
+                            // printf("2descuento = %f\n",descuento);
                             // printf("2DDDDDDDDDDDDDDDDDDDDDDD\n");
 
 
@@ -136,7 +136,7 @@ void detalles_cliente(int id,int volver) {
                     printf("Error en la apertura de contratos.dat\n");  
 
 //-FIN--------------------------- DETALLES DE CONTRATO ------------------------------FIN- //
-printf("3descuento = %d\n",descuento);
+// printf("3descuento = %d\n",descuento);
                 printf("SERVICIO/S DEL CLIENTE\n\n");
                 //abrimos el archivo "servicios_clientes.dat"y buscamos los servicios que tiene
                 FILE *archivo_servicios;
@@ -156,13 +156,13 @@ printf("3descuento = %d\n",descuento);
                         fread(&datos_servicios_clientes,sizeof(servicios_clientes),1,archivo_servicios);
                     }
                     //cerramos el archivo
-                    printf("4descuento = %d\n",descuento);
+                    // printf("4descuento = %d\n",descuento);
                     fclose(archivo_servicios);
                     printf("\n");
                     //------------------------ Mostramos el total a pagar
                     printf("MONTOS\n\n");
                     printf("Total = $%.2f\n",total_pagar);
-                    printf("2descuento = %d\n",descuento);
+                    // printf("2descuento = %d\n",descuento);
                     
                     printf("Descuento = $%.2f\n",descuento);
                     printf("Total a pagar = $%.2f\n",total_pagar-descuento);
@@ -172,7 +172,7 @@ printf("3descuento = %d\n",descuento);
             }
             //volvemos a hacer la lectura del siguiente elemento
             fread(&datos_clientes,sizeof(clientes),1,archivo);
-        }
+        }//Fin while1
         //pausamos pantalla
         system("pause");
         if(volver == 1) {

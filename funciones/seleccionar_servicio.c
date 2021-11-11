@@ -9,10 +9,7 @@
 #include"fecha.c"
 
 //seleccionar servicios
-/*
-by Sciangula Hugo v1 26/10/21
-detalles: 
-*/
+
 void seleccionar_servicio(int *total_pagar,int dni) {
     FILE *archivo;
     int servicio_seleccionado;

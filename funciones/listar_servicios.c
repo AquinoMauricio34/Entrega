@@ -8,10 +8,7 @@
 #include"../prototipos.h"
 
 //Listar Servicios
-/*
-by Sciangula Hugo v1 28/10/21
-detalles: vamos a listar los servicios disponibles en el archivo 
-*/
+
 void listar_servicios(int menu) {
     FILE *archivo;
     int tipo_seleccionado,continuar;

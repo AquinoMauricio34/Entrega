@@ -69,12 +69,11 @@ void modificar_clientes(){
                             idexistente=1;
                         break;
                         case 4:
-                            printf("ACA SE TIENE QUE MODIFICAR EL SERVICIO (actualizar)\n");
                             modificar_servicios_clientes(id);
                         break;
                         
                     }
-            printf("Estoy dentro opcion %d\n",opcion);
+            // printf("Estoy dentro opcion %d\n",opcion);
 
 
 //ERROR CRITICO FATAL DE BUCLE MEGA INFINITO -----------------------------------------------------------------------
@@ -85,7 +84,7 @@ void modificar_clientes(){
             
             } while(opcion != 5);    
             }
-        printf("Estoy fuera opcion %d\n",opcion);
+        // printf("Estoy fuera opcion %d\n",opcion);
         //leemos lo que se modifico en el archivo
         //
         fread(&modificar_clientes,sizeof(clientes),1,archivo);
